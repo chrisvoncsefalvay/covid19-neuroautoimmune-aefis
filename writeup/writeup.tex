@@ -92,15 +92,19 @@ $^{1}$ \quad Starschema Inc., Arlington, VA; csefalvayk@starschema.net}
 \corres{Correspondence: csefalvayk@starschema.net}
 
 
-%\simplesumm{} % Simple summary
-
-%\conference{} % An extended version of a conference paper
-
-% Abstract (Do not insert blank lines, i.e. \\) 
-\abstract{A single paragraph of about 200 words maximum. For research articles, abstracts should give a pertinent overview of the work. We strongly encourage authors to use the following style of structured abstracts, but without headings: (1) Background: place the question addressed in a broad context and highlight the purpose of the study; (2) Methods: describe briefly the main methods or treatments applied; (3) Results: summarize the article's main findings; (4) Conclusion: indicate the main conclusions or interpretations. The abstract should be an objective representation of the article, it must not contain results which are not presented and substantiated in the main text and should not exaggerate the main conclusions.}
+% Abstract (Do not insert blank lines, i.e. \\)
+\abstract{Neuroautoimmune disorders, such as multiple sclerosis and Guillain-Barre syndrome, have been documented in
+relation to various vaccines in the past. This paper uses passive reporting information from the CDC/FDA's VAERS
+system to analyse whether neuroautoimmune presentations are reported at a relatively higher or lower rate, vis-a-vis
+other adverse effects, for COVID-19 vaccines than for other vaccines. Through computing the reporting odds ratios for
+a range of symptoms and comparator vaccines, a clear indication in favour of the safety of COVID-19 vaccines
+emerges, with reports of neuroautoimmune adverse events in relation to other adverse events being over 70\% less
+likely for COVID-19 than for comparator vaccines ($ROR: 0.292$, $p < 0.0001$). In comparison with other vaccines given
+as part of routine care in adulthood, COVID-19 vaccines have the lowest reporting odds ratio of neuroautoimmune
+adverse effects (median $ROR$: $0.246$).}
 
 % Keywords
-\keyword{neuroautoimmune disorders, demyelinating disorders, vaccine safety, pharmacovigilance, COVID-19 vaccines}
+\keyword{Neuroautoimmune disorders, demyelinating disorders, vaccine safety, pharmacovigilance, COVID-19 vaccines}
 
 % The fields PACS, MSC, and JEL may be left empty or commented out if not applicable
 %\PACS{J0101}
@@ -109,151 +113,280 @@ $^{1}$ \quad Starschema Inc., Arlington, VA; csefalvayk@starschema.net}
 
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\setcounter{section}{-1} %% Remove this when starting to work on the template.
-\section{How to Use this Template}
-
-The template details the sections that can be used in a manuscript. Note that the order and names of article sections may differ from the requirements of the journal (e.g., the positioning of the Materials and Methods section). Please check the instructions on the authors' page of the journal to verify the correct order and names. For any questions, please contact the editorial office of the journal or support@mdpi.com. For LaTeX-related questions please contact latex@mdpi.com.
-%The order of the section titles is: Introduction, Materials and Methods, Results, Discussion, Conclusions for these journals: aerospace,algorithms,antibodies,antioxidants,atmosphere,axioms,biomedicines,carbon,crystals,designs,diagnostics,environments,fermentation,fluids,forests,fractalfract,informatics,information,inventions,jfmk,jrfm,lubricants,neonatalscreening,neuroglia,particles,pharmaceutics,polymers,processes,technologies,viruses,vision
 
 \section{Introduction}
 
-The introduction should briefly place the study in a broad context and highlight why it is important. It should define the purpose of the work and its significance. The current state of the research field should be reviewed carefully and key publications cited. Please highlight controversial and diverging hypotheses when necessary. Finally, briefly mention the main aim of the work and highlight the principal conclusions. As far as possible, please keep the introduction comprehensible to scientists outside your particular field of research. Citing a journal paper \cite{ref-journal}. Now citing a book reference \cite{ref-book1,ref-book2} or other reference types \cite{ref-unpublish,ref-communication,ref-proceeding}. Please use the command \citep{ref-thesis,ref-url} for the following MDPI journals, which use author--date citation: Administrative Sciences, Arts, Econometrics, Economies, Genealogy, Histories, Humanities, IJFS, Journal of Intelligence, Journalism and Media, JRFM, Languages, Laws, Religions, Risks, Social Sciences.
- 
+The global drive to curb the spread of COVID-19 through a concerted vaccination effort is undoubtedly one of the most
+ambitious public health projects ever undertaken. At the time of writing, only a little over six months after the FDA
+granted EUAs to the first two of eventually three SARS-CoV-2 vaccines in early December, over 43\% of the U.S.
+population has been fully vaccinated (i.e. two doses of a two-dose vaccine or a single dose of a one-dose vaccine). For
+comparison, during the severe 2017-18 flu season, only 37.1\% of adults were vaccinated.\cite{centers2018estimates}
+
+To safeguard this unprecedented accomplishment, it is crucial to exercise close surveillance of potential adverse
+events (AEFIs). At least partially owing to the fact that the Moderna and Pfizer/BioNTech vaccines are first-in-man
+applications of mRNA vaccine technology at scale, a significant number of eligible individuals have refused to be
+vaccinated.\cite{dror2020vaccine,robertson2021predictors,troiano2021vaccine} The fear of adverse effects, both short and
+long term, is undoubtedly a driving factor that fuels these apprehensions and eventually results in an overall
+reluctance to be vaccinated. Among mid- to long-term AEFIs, neurological AEFIs hold a particular place, as is evident
+from studies on reasons behind vaccine refusal.\cite{berry2021lessons} The bitter past experience with Guillain-Barre
+syndrome (GBS) as a side effect of certain influenza vaccines, esp. the much publicised association between 1976-77
+A/New Jersey/8/76 influenza vaccines and GBS, is still within living memory.\cite{haber2004guillain} Similarly
+well-known is the association between the recombinant hepatitis B vaccine and multiple
+sclerosis.\cite{hernan2004recombinant} In addition, the  emergence of various theories about a purported (and
+disproven) causal mechanism between autism spectrum disorders and vaccinations that hypothesises an autoimmune
+pathogenetic process has created a persistent point of rhetoric that erroneously portrays vaccines as inevitably
+likely to cause neuroautoimmunity.\cite{poland2001understanding} Given the often devastating economic, social,
+psychological and QoL impact of neuroautoimmune diseases,\cite{marck2020predictors,miller2006health,patwardhan2005cost}
+some degree of apprehension appears natural.
+
+It is beyond the scope of this paper to outline the range of potential pathophysiological mechanisms that may underlie
+autoimmunity, including neuroautoimmunity, following a vaccination (for such a review, see Wraith et al.
+(2003)\cite{wraith2003vaccination}). Rather, we seek to identify evidence regarding the safety of COVID-19 vaccines
+approved in the United States (Pfizer/BioNTech, Moderna and Johnson \& Johnson) with regard to neuroautoimmune AEFIs
+through an analysis of VAERS.
+
+As all studies leveraging VAERS, its limitations must be read in conjunction with results derived from VAERS data. Like
+all passive pharmacovigilance systems, it relies on reporting. Under the terms of the EUAs granted to each of the three
+vaccine manufacturers, COVID-19 vaccination providers must report any
+
+\begin{itemize}
+\item	vaccine administration errors (regardless of consequence);
+\item	serious AEFI (regardless of causal attribution), incl. any AEFI resulting in inpatient admission, long-term
+disability or death; and
+\item	instances of multi-system inflammatory syndrome,
+\end{itemize}
+
+\noindent along with serious immunisation failures (cases of COVID-19 in vaccinated individuals that result in
+inpatient admission or death). This goes beyond to the typical reporting regime, wherein reporting is encouraged but
+not mandatory unless the patient was a minor at the time. At the same time, VAERS remains open to reports from
+individuals, allied healthcare workers and even unrelated third
+parties.\cite{chen1994vaccine,shimabukuro2015safety,singleton1999overview} In other words, while there is a risk of
+unreported AEFIs, there may also be a degree of over-reporting (the same AEFI, for instance, may be reported by the
+physician, the nurse and the patient as well, without the knowledge of any of the other parties). Moreover, VAERS does
+not verify the accuracy or veracity of reports, nor does it require a causal attribution. This is notably illustrated
+by the number of accidents, drownings and congenital diagnoses reported to VAERS, none of which could conceivably be a
+causal consequence of vaccination. Thus, VAERS data must be appropriately analysed to fulfill its function, which is to
+generate early potential safety signals rather than to substantiate a causal relationship.
+
+In this paper, we are using a reporting odds ratio (ROR) analysis\cite{rothman2004reporting} to compare the likelihood
+that an AEFI reported to VAERS is one of a number of neuroautoimmune AEFIs between COVID-19 and non-COVID-19 vaccines,
+concluding that no such association appears to emerge from the evidence as it presently stands, and that the odds of
+reporting a neuroautoimmune AEFI are significantly lower than for comparable vaccines.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Materials and Methods}
 
-Materials and Methods should be described with sufficient details to allow others to replicate and build on published results. Please note that publication of your manuscript implicates that you must make all materials, data, computer code, and protocols associated with the publication available to readers. Please disclose at the submission stage any restrictions on the availability of materials or information. New methods and protocols should be described in detail while well-established methods can be briefly described and appropriately cited.
+Data was obtained for 2015 to 2021, inclusive, from the VAERS website (\url{https://vaers.hhs.gov}) on 12 June 2021.
+The data comprises all reports that were received between 01 January 2015 and 28 May 2021, comprising altogether
+2,528,763 individual reports. Of these, 1,323,178 (52.33\%) pertained to a COVID-19 vaccine.
 
-Research manuscripts reporting large datasets that are deposited in a publicly avail-able database should specify where the data have been deposited and provide the relevant accession numbers. If the accession numbers have not yet been obtained at the time of submission, please state that they will be provided during review. They must be provided prior to publication.
+\subsection{Categorisation of cases}
 
-\begin{quote}
-This is an example of a quote.
-\end{quote}
+Following ingestion using Python v.3.7.5 and \texttt{pandas} v.1.2.4,\cite{mckinney2011pandas} the resulting data
+frames were joined and reshaped to yield individual entries per reported symptom. Using the symptom description,
+reports of the following VAERS symptoms (i.e. symptoms using the coding phraseology as present in VAERS) were coded as
+involving a neuroautoimmune AEFI:
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Results}
-
-This section may be divided by subheadings. It should provide a concise and precise description of the experimental results, their interpretation as well as the experimental conclusions that can be drawn.
-\subsection{Subsection}
-\subsubsection{Subsubsection}
-
-Bulleted lists look like this:
 \begin{itemize}
-\item	First bullet;
-\item	Second bullet;
-\item	Third bullet.
+    \item Demyelinating polyneuropathy
+    \item Immune-mediated neuropathy
+    \item Axonal neuropathy
+    \item Axonal and demyelinating neuropathy
+    \item Chronic inflammatory demyelinating polyradiculoneuropathy
+    \item Subacute inflammatory demyelinating polyradiculoneuropathy
+    \item Autoimmune neuropathy
+    \item Autonomic neuropathy
+    \item Guillain-Barre syndrome
+    \item Acute disseminated encephalomyelitis
+    \item Demyelinating polyneuropathy
+    \item Neuromyelitis optica spectrum disorder
+    \item Neuromyelitis optica
+    \item Myelitis transverse
+    \item Multiple sclerosis relapse
+    \item Multiple sclerosis
+    \item Relapsing multiple sclerosis
+    \item Progressive multiple sclerosis
+    \item Relapsing-remitting multiple sclerosis
+    \item Optic neuritis
+    \item Immune-mediated encephalitis
+    \item Autoimmune encephalopathy
+    \item Encephalitis autoimmune
+    \item Autoimmune demyelinating disease
 \end{itemize}
 
-Numbered lists can be added as follows:
-\begin{enumerate}
-\item	First item; 
-\item	Second item;
-\item	Third item.
-\end{enumerate}
-
-The text continues here. 
-
-\subsection{Figures, Tables and Schemes}
-
-All figures and tables should be cited in the main text as Figure~\ref{fig1}, Table~\ref{tab1}, etc.
+Based on this encoding, the individual data was segmented and age distributions were calculated
+(Figure~\ref{distribution_by_age}). Subjects receiving the COVID-19 vaccine were on average older ($\mu = $50.2, $\sigma =$
+17.8) than those who received other vaccines  ($\mu = $36.9, $\sigma =$ 28.3), a phenomenon attributable to the
+relatively large number of childhood vaccines in relation to vaccines received in later life. Except for male
+recipients of the COVID-19 vaccine, age distribution of neuroautoimmune disorders followed a bimodal pattern, peaking
+in the third and eight decades of life. Male recipients of the COVID-19 vaccine who reported a neuroautoimmune AEFI
+tended towards a single mode in the early seventh decade of life.
 
 \begin{figure}[H]
-\includegraphics[width=10.5 cm]{Definitions/logo-mdpi}
-\caption{This is a figure. Schemes follow the same formatting. If there are multiple panels, they should be listed as: (\textbf{a}) Description of what is contained in the first panel. (\textbf{b}) Description of what is contained in the second panel. Figures should be placed in the main text near to the first time they are cited. A caption on a single line should be centered.\label{fig1}}
-\end{figure}   
+\includegraphics[width=12.5 cm]{age_distribution}
+\caption{Distribution of reports by age, partitioned by vaccine type (COVID-19 vs. non-COVID-19 vaccine) and
+neuroautoimmune disorder status (neuroautoimmune vs. non-neuroautoimmune symptoms).\label{distribution_by_age}}
+\end{figure}
 
-% The MDPI table float is called specialtable
-\begin{specialtable}[H] 
-\caption{This is a table caption. Tables should be placed in the main text near to the first time they are~cited.\label{tab1}}
+Data was cross-tabulated to yield a 2x2 contingency table for COVID-19 vs. non-COVID-19 vaccines
+(Table~\ref{contingency_table}), and the odds ratio was calculated using Fisher's exact test. In addition, a
+Pearson's $\chi^2$ test was performed and the Pearson residuals were calculated for each permutation, using
+\texttt{statsmodels} v.0.12.2.\cite{seabold2010statsmodels}
+
+\begin{specialtable}[H]
+\caption{2x2 contingency table by vaccine type (COVID-19 vs. non-COVID-19 vaccine) and neuroautoimmune
+disorder status.\label{contingency_table}}
 %%% \tablesize{} %% You can specify the fontsize here, e.g., \tablesize{\footnotesize}. If commented out \small will be used.
 \begin{tabular}{ccc}
 \toprule
-\textbf{Title 1}	& \textbf{Title 2}	& \textbf{Title 3}\\
+\textbf{Neuroautoimmune AEFI}	& \textbf{Non-neuroautoimmune AEFI}\\
 \midrule
-Entry 1		& Data			& Data\\
-Entry 2		& Data			& Data\\
+COVID-19 vaccine	    	& 612			    & 1908  \\
+Non-COVID-19 vaccine		& 1,322,566			& 1,203,677\\
 \bottomrule
 \end{tabular}
 \end{specialtable}
 
-%\begin{listing}[H]
-%\caption{Title of the listing}
-%\rule{\columnwidth}{1pt}
-%\raggedright Text of the listing. In font size footnotesize, small, or normalsize. Preferred format: left aligned and single spaced. Preferred border format: top border line and bottom border line.
-%\rule{\columnwidth}{1pt}
-%\end{listing}
+Next, symptoms were broken down individually, and a $\chi^2$ distribution fitted. Along with the actual values, the
+expected values under the null hypothesis of independence ($H_0$) were ascertained, as well as the Pearson residuals.
 
-Text.
+Finally, a large contingency table was constructed, calculating the reporting odds ratio of each AEFI for each vaccine
+category (VAERS variable \texttt{VAX\_TYPE}), which acts as a superset comprising vaccines that have typically the same
+target and same valency (e.g. the Johnson\&Johnson COVID-19 vaccine and the Moderna vaccine are both in the
+\texttt{COVID19} vaccine category, whereas a trivalent and a quadrivalent influenza vaccine would be different vaccine
+categories due to their difference in valency). For the purposes of constructing this table, a regular expression was
+used to filter out a number of entities that are typically recorded in VAERS but which do not indicate an appropriate
+denominator for the calculation of the odds ratio. These were used to exclude
 
-Text.
+\begin{itemize}
+    \item normal results (e.g. \texttt{.*(negative|normal)\$}),
+    \item mere tests and assays that do not disclose a result (e.g. \texttt{.*assay\$}),
+    \item procedures (e.g. \texttt{.*(plasty|insertion|tomy|ery...}),
+    \item management of an ongoing medical status or device,
+    \item administrative flags (e.g. \texttt{Blood (group|don(or|ation))}), and
+    \item COVID-19 related public health interventions (e.g. \texttt{COVID-19 \\ (prophylaxis|immunisation|screening)}).
+\end{itemize}
 
-\subsection{Formatting of Mathematical Components}
+RORs were cross-tabulated by vaccine type and filtered only for symptoms that were categorised as neuroautoimmmune
+symptomatic presentations.
 
-This is the example 1 of equation:
-\begin{equation}
-a = 1,
-\end{equation}
-the text following an equation need not be a new paragraph. Please punctuate equations as regular text.
-%% If the documentclass option "submit" is chosen, please insert a blank line before and after any math environment (equation and eqnarray environments). This ensures correct linenumbering. The blank line should be removed when the documentclass option is changed to "accept" because the text following an equation should not be a new paragraph.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Results}
 
-This is the example 2 of equation:
-\end{paracol}
-\nointerlineskip
-\begin{equation}
-a = b + c + d + e + f + g + h + i + j + k + l + m + n + o + p + q + r + s + t + u + v + w + x + y + z
-\end{equation}
+\subsection{Association with neuroautoimmune AEFIs}
 
-% Example of a figure that spans the whole page width (the commands \widefigure and \begin{paracol}{2}, \linenumbers, and\switchcolumn need to be present). The same concept works for tables, too.
-\begin{figure}[H]	
-\widefigure
-\includegraphics[width=15 cm]{Definitions/logo-mdpi}
-\caption{This is a wide figure.\label{fig2}}
-\end{figure}  
-\begin{paracol}{2}
-\linenumbers
-\switchcolumn
+Fisher's two-sided exact test was used to calculate the odds ratio to determine the odds ratio for an association
+between reporting a neuroautoimmune AEFI and reporting after/in relationship with a COVID-19 vaccine. This yielded an
+OR of 0.292 at $p < 0.0001$ - a statistically highly significant result that indicates COVID-19 vaccination predisposes
+to a significantly lower risk – by over 70\% – of reporting a neuroautoimmune side effect rather than any other side
+effect. It is important to note that this does not mean that neuroautoimmune side effects are 70\% less frequent, but
+rather that the likelihood of reporting a neuroautoimmune side effect over any other side effect is 70\% lower.
 
-Please punctuate equations as regular text. Theorem-type environments (including propositions, lemmas, corollaries etc.) can be formatted as follows:
-%% Example of a theorem:
-\begin{Theorem}
-Example text of a theorem.
-\end{Theorem}
+\begin{specialtable}[H]
+\caption{Pearson residuals by vaccine type (COVID-19 vs. non-COVID-19 vaccine) and neuroautoimmune
+disorder status.\label{pearson_residuals}}
+%%% \tablesize{} %% You can specify the fontsize here, e.g., \tablesize{\footnotesize}. If commented out \small will be used.
+\begin{tabular}{ccc}
+\toprule
+\textbf{Neuroautoimmune AEFI}	& \textbf{Non-neuroautoimmune AEFI}\\
+\midrule
+COVID-19 vaccine	    	& -19.459			    & 20.386  \\
+Non-COVID-19 vaccine		& 0.615			        & -0.644\\
+\bottomrule
+\end{tabular}
+\end{specialtable}
 
-The text continues here. Proofs must be formatted as follows:
+This is confirmed by the Pearson $\chi^2$ residuals that were calculated (see Table~\ref{pearson_residuals}). The
+residual of neuroautoimmune AEFIs following a COVID-19 vaccine ($-19.459$) indicates that the actual value is
+significantly higher than the value expected value under the assumption of the null hypothesis of independence. It is
+therefore quite evident that the odds of reporting a neuroautoimmune AEFI over any other AEFI are correlated with
+whether the preceding vaccine was a COVID-19 vaccine or not, with recipients of COVID-19 vaccines being significantly
+(70\%) less likely to report a neuroautoimmune AEFI.
 
-%% Example of a proof:
-\begin{proof}[Proof of Theorem 1]
-Text of the proof. Note that the phrase ``of Theorem 1'' is optional if it is clear which theorem is being referred to.
-\end{proof}
-The text continues here.
+\subsection{Association of individual neuroautoimmune AEFIs}
+
+\begin{figure}[H]
+\includegraphics[width=12.5 cm]{expected_vs_actual_by_symptoms}
+\caption{Expected vs. actual number of reports for individual neuroautoimmune symptoms based on Pearson's $\chi^2$ test
+along with Pearson residuals for COVID-19 vaccines.\label{expected_vs_actual}}
+\end{figure}
+
+Following on from these findings, it is not surprising to see that in most cases, the number of actual cases reported
+is significantly lower than would be expected under the null hypothesis of independence (see
+Figure~\ref{expected_vs_actual}). The notable exceptions are
+
+\begin{itemize}
+    \item progressive MS (Pearson residual: 0.243),
+    \item immune-mediated encephalitis (Pearson residual: 0.243),
+    \item autoimmune demyelinating disease (Pearson residual: 0.864),
+    \item autoimmune encephalopathy (Pearson residual: 0.627), and
+    \item MS relapse (Pearson residual: 0.664).
+\end{itemize}
+
+While the residuals indicate that the deviation is quite small for all of the above, it appears that in contrast with
+other vaccines, COVID-19 vaccines appear to result in a relatively higher number than expected of these AEFIs. This
+must be considered in the context of actual figures, of course – altogether, these differences account for fewer than
+0.25 additional cases of progressive MS and immune-mediated encephalitis, fewer than one case of autoimmune
+encephalopathy, fewer than 4 cases of MS relapse and fewer than 1.5 cases of autoimmune demyelinating disease. Of over
+1.3m reports, these constitute an excess of six cases, or approx. one in 220,530 reports. Consequently, it remains to
+be seen (especially given the low absolute numbers) whether this association remains in evidence as more data accrues,
+or, as is more likely, it is part of the noisy undercurrent that is characteristic of passive reporting.
+
+\subsection{Reporting odds ratios between vaccines}
+
+\begin{figure}[H]
+\includegraphics[width=12.5 cm]{ror_by_vaccine_type}
+\caption{Reporting Odds Ratios of neuroautoimmune conditions in a range of vaccines approved for adult populations.
+\label{ror_by_vaccine_type}}
+\end{figure}
+
+As Figure~\ref{ror_by_vaccine_type} shows, the ROR of neuroautoimmune presentations is significantly lower for COVID-19
+vaccines than it is for any of the comparator vaccines. The group of comparators was chosen to primarily include
+vaccines that have the same age range of approved users to reduce the bias arising from the fact that some vaccines
+are typically given in a paediatric context (e.g. MMR), while COVID-19 vaccination was consciously designed to
+address older populations first due to their higher overall risk from COVID-19 as well as the relatively higher rate
+of respiratory, cardiac and endocrine comorbidities that governed vaccine allocation in the beginning.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion}
 
-Authors should discuss the results and how they can be interpreted from the perspective of previous studies and of the working hypotheses. The findings and their implications should be discussed in the broadest context possible. Future research directions may also be highlighted.
+Based on early data from VAERS for reports about COVID-19 vaccinations received on or before 28 May 2021, there
+is convincing evidence that COVID-19 vaccines compare remarkably well with other vaccines in respect of
+neuroautoimmune AEFIs. Despite the limitations of this study, which drew on passive reporting data with all its
+inherent problems, such as reporting bias and the lack of a reliable denominator, we have found evidence that supports
+the safety of COVID-19 vaccines with regard to neuroimmunological presentations. Statistical analysis indicated that in
+comparison to recipients of other vaccines, those who reported in respect of a COVID-19 vaccines were over 70\% less
+likely to report a neuroimmunological presentation than a non-neuroimmunological presentation.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Conclusions}
+Similarly, the number of reports fell significantly under what was expected in all but two somemwhat cohesive symptom
+groups: relapses of MS on one hand and autoimmmune encephalitis on the other. The fact that some forms of autoimmune
+encephalitis are distributed bimodally by age with a peak in the third and the seventh decade of life may support a
+hypothesis that the increase in cases of autoimmune encephalitis is the consequence of statistical noise and/or
+sampling bias due to the higher average age of COVID-19 vaccine recipients in the sample.\cite{shan2021neuronal}
+Similarly, multiple sclerosis exhibits a similar bimodality of age distribution, to the point that respective terms
+for early-onset (teens to early 30s) and late onset (50s and later) MS have become established in the
+literature.\cite{kis2008clinical} Nevertheless, clinicians may, as a matter of abundance of caution, keep a closer eye
+on patients with known MS or risk factors for MS (such as previous diagnosis of optic neuritis or CIS/RIS) for signs
+of progression or relapse. This may be accompanied byy proactively explaining the relative risk of a relapse in the
+context of potentially worse clinical outcomes with COVID-19, especially for patients treated with systemic
+immunosupressants.
 
-This section is not mandatory, but can be added to the manuscript if the discussion is unusually long or complex.
+Since the start of the global vaccination campaign, evidence has been accumulating for the overall tolerability and
+safety of the COVID-19 vaccines. This study seeks to add to our current understanding by quantifying the highly
+favourable risk profile of COVID-19 vaccines with regard to neuroautoimmune disorders. While some questions remain open
+and conclusions made over early data may have to be reconfirmed through ongoing analysis, the current data supports
+the assertion that the COVID-19 vaccine has perhaps the lowest reporting odds ratio for neuroautoimmune disorders of
+any vaccine routinely given in adulthood. This is a reassuring indication of safety at a time when concerns about
+adverse events still keep most countries from attaining the threshold of collective immunity.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \vspace{6pt} 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% optional
-%\supplementary{The following are available online at \linksupplementary{s1}, Figure S1: title, Table S1: title, Video S1: title.}
-
-% Only for the journal Methods and Protocols:
-% If you wish to submit a video article, please do so with any other supplementary material.
-% \supplementary{The following are available at \linksupplementary{s1}, Figure S1: title, Table S1: title, Video S1: title. A supporting video article is available at doi: link.} 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \funding{This research was funded by Starschema Inc. under its intramural research funding programme.}
 
 \dataavailability{VAERS reporting data is available from the CDC's website at \url{https://vaers.hhs.gov}. All code and
-scripts supporting this manuscript are deposited at }
+scripts supporting this manuscript are deposited at
+\url{https://github.com/chrisvoncsefalvay/covid19-neuroautoimmune-aefis} and are made available with the DOI <to follow>.}
 
 
 \conflictsofinterest{CvC is a consultant to a company that may be affected by the research reported in this paper. The funders had no role in the design of the study; in the collection, analyses, or interpretation of data; in the writing of the manuscript, or in the decision to publish the~results.}
@@ -266,103 +399,24 @@ The following abbreviations are used in this manuscript:\\
 
 \noindent 
 \begin{tabular}{@{}ll}
-MDPI & Multidisciplinary Digital Publishing Institute\\
-DOAJ & Directory of open access journals\\
-TLA & Three letter acronym\\
-LD & Linear dichroism
-\end{tabular}}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Optional
-\appendixtitles{no} % Leave argument "no" if all appendix headings stay EMPTY (then no dot is printed after "Appendix A"). If the appendix sections contain a heading then change the argument to "yes".
-\appendixstart
-\appendix
-\section{}
-\subsection{}
-The appendix is an optional section that can contain details and data supplemental to the main text---for example, explanations of experimental details that would disrupt the flow of the main text but nonetheless remain crucial to understanding and reproducing the research shown; figures of replicates for experiments of which representative data are shown in the main text can be added here if brief, or as Supplementary Data. Mathematical proofs of results not central to the paper can be added as an appendix.
-
-\begin{specialtable}[H] 
-%\tablesize{\scriptsize}
-\caption{This is a table caption. Tables should be placed in the main text near to the first time they are~cited.\label{tab2}}
-%\tablesize{} % You can specify the fontsize here, e.g., \tablesize{\footnotesize}. If commented out \small will be used.
-\begin{tabular}{ccc}
-\toprule
-\textbf{Title 1}	& \textbf{Title 2}	& \textbf{Title 3}\\
-\midrule
-Entry 1		& Data			& Data\\
-Entry 2		& Data			& Data\\
-\bottomrule
+AEFI & Adverse event following immmunization \\
+CDC & Centers for Disease Control and Prevention \\
+CIS & clinically isolated syndrome\\
+EUA & Emergency Use Authorization\\
+FDA & Food and Drug Administration\\
+GBS & Guillain-Barre syndrome\\
+mRNA & messenger RNA\\
+MS & multiple sclerosis \\
+RIS & radiologically isolated syndrome\\
+ROR & Reporting Odds Ratio\\
+VAERS & Vaccine Adverse Effect Reporting System\\
 \end{tabular}
-\end{specialtable}
-
-\section{}
-All appendix sections must be cited in the main text. In the appendices, Figures, Tables, etc. should be labeled, starting with ``A''---e.g., Figure A1, Figure A2, etc. 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\end{paracol}
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \reftitle{References}
 
-% Please provide either the correct journal abbreviation (e.g. according to the “List of Title Word Abbreviations” http://www.issn.org/services/online-services/access-to-the-ltwa/) or the full name of the journal.
-% Citations and References in Supplementary files are permitted provided that they also appear in the reference list here. 
+\externalbibliography{yes}
+\bibliography{bibliography}
 
-%=====================================
-% References, variant A: external bibliography
-%=====================================
-%\externalbibliography{yes}
-%\bibliography{your_external_BibTeX_file}
-
-%=====================================
-% References, variant B: internal bibliography
-%=====================================
-\begin{thebibliography}{999}
-% Reference 1
-\bibitem[Author1(year)]{ref-journal}
-Author~1, T. The title of the cited article. {\em Journal Abbreviation} {\bf 2008}, {\em 10}, 142--149.
-% Reference 2
-\bibitem[Author2(year)]{ref-book1}
-Author~2, L. The title of the cited contribution. In {\em The Book Title}; Editor1, F., Editor2, A., Eds.; Publishing House: City, Country, 2007; pp. 32--58.
-% Reference 3
-\bibitem[Author3(year)]{ref-book2}
-Author 1, A.; Author 2, B. \textit{Book Title}, 3rd ed.; Publisher: Publisher Location, Country, 2008; pp. 154--196.
-% Reference 4
-\bibitem[Author4(year)]{ref-unpublish}
-Author 1, A.B.; Author 2, C. Title of Unpublished Work. \textit{Abbreviated Journal Name} stage of publication (under review; accepted; in~press).
-% Reference 5
-\bibitem[Author5(year)]{ref-communication}
-Author 1, A.B. (University, City, State, Country); Author 2, C. (Institute, City, State, Country). Personal communication, 2012.
-% Reference 6
-\bibitem[Author6(year)]{ref-proceeding}
-Author 1, A.B.; Author 2, C.D.; Author 3, E.F. Title of Presentation. In Title of the Collected Work (if available), Proceedings of the Name of the Conference, Location of Conference, Country, Date of Conference; Editor 1, Editor 2, Eds. (if available); Publisher: City, Country, Year (if available); Abstract Number (optional), Pagination (optional).
-% Reference 7
-\bibitem[Author7(year)]{ref-thesis}
-Author 1, A.B. Title of Thesis. Level of Thesis, Degree-Granting University, Location of University, Date of Completion.
-% Reference 8
-\bibitem[Author8(year)]{ref-url}
-Title of Site. Available online: URL (accessed on Day Month Year).
-\end{thebibliography}
-
-% If authors have biography, please use the format below
-%\section*{Short Biography of Authors}
-%\bio
-%{\raisebox{-0.35cm}{\includegraphics[width=3.5cm,height=5.3cm,clip,keepaspectratio]{Definitions/author1.pdf}}}
-%{\textbf{Firstname Lastname} Biography of first author}
-%
-%\bio
-%{\raisebox{-0.35cm}{\includegraphics[width=3.5cm,height=5.3cm,clip,keepaspectratio]{Definitions/author2.jpg}}}
-%{\textbf{Firstname Lastname} Biography of second author}
-
-% The following MDPI journals use author-date citation: Arts, Econometrics, Economies, Genealogy, Humanities, IJFS, JRFM, Laws, Religions, Risks, Social Sciences. For those journals, please follow the formatting guidelines on http://www.mdpi.com/authors/references
-% To cite two works by the same author: \citeauthor{ref-journal-1a} (\citeyear{ref-journal-1a}, \citeyear{ref-journal-1b}). This produces: Whittaker (1967, 1975)
-% To cite two works by the same author with specific pages: \citeauthor{ref-journal-3a} (\citeyear{ref-journal-3a}, p. 328; \citeyear{ref-journal-3b}, p.475). This produces: Wong (1999, p. 328; 2000, p. 475)
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% for journal Sci
-%\reviewreports{\\
-%Reviewer 1 comments and authors’ response\\
-%Reviewer 2 comments and authors’ response\\
-%Reviewer 3 comments and authors’ response
-%}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
 
