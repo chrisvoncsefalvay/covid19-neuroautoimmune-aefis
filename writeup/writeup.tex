@@ -145,7 +145,7 @@ autoimmunity, including neuroautoimmunity, following a vaccination (for such a r
 approved in the United States (Pfizer/BioNTech, Moderna and Johnson \& Johnson) with regard to neuroautoimmune AEFIs
 through an analysis of VAERS.
 
-As all studies leveraging VAERS, its limitations must be read in conjunction with results derived from VAERS data. Like
+As with all studies leveraging VAERS, its limitations must be read in conjunction with results derived from VAERS data. Like
 all passive pharmacovigilance systems, it relies on reporting. Under the terms of the EUAs granted to each of the three
 vaccine manufacturers, COVID-19 vaccination providers must report any
 
@@ -160,25 +160,33 @@ disability or death; and
 inpatient admission or death). This goes beyond to the typical reporting regime, wherein reporting is encouraged but
 not mandatory unless the patient was a minor at the time. At the same time, VAERS remains open to reports from
 individuals, allied healthcare workers and even unrelated third
-parties.\cite{chen1994vaccine,shimabukuro2015safety,singleton1999overview} In other words, while there is a risk of
-unreported AEFIs, there may also be a degree of over-reporting (the same AEFI, for instance, may be reported by the
-physician, the nurse and the patient as well, without the knowledge of any of the other parties). Moreover, VAERS does
-not verify the accuracy or veracity of reports, nor does it require a causal attribution. This is notably illustrated
-by the number of accidents, drownings and congenital diagnoses reported to VAERS, none of which could conceivably be a
-causal consequence of vaccination. Thus, VAERS data must be appropriately analysed to fulfill its function, which is to
-generate early potential safety signals rather than to substantiate a causal relationship.
+parties.\cite{chen1994vaccine,shimabukuro2015safety,singleton1999overview} In other words, while there is a risk of unreported AEFIs, there may also 
+be a degree of over-reporting (the same AEFI, for instance, may be 
+reported by the physician, the nurse and the patient as well, without the 
+knowledge of any of the other parties). Moreover, VAERS does
+not verify the accuracy or veracity of reports, nor does it require a 
+causal attribution. This is notably illustrated by the number of 
+accidents, drownings and congenital diagnoses reported to VAERS, none of 
+which could conceivably be a causal consequence of vaccination. Thus, 
+VAERS data must be appropriately analysed to fulfill its function, which 
+is to generate early potential safety signals rather than to substantiate 
+a causal relationship.
 
-In this paper, we are using a reporting odds ratio (ROR) analysis\cite{rothman2004reporting} to compare the likelihood
-that an AEFI reported to VAERS is one of a number of neuroautoimmune AEFIs between COVID-19 and non-COVID-19 vaccines,
-concluding that no such association appears to emerge from the evidence as it presently stands, and that the odds of
-reporting a neuroautoimmune AEFI are significantly lower than for comparable vaccines.
+In this paper, we are using a reporting odds ratio (ROR) 
+analysis\cite{rothman2004reporting} to compare the likelihood
+that an AEFI reported to VAERS is one of a number of neuroautoimmune AEFIs 
+
+between COVID-19 and non-COVID-19 vaccines, concluding that a strong 
+association exists in favour of COVID-19 vaccines. Based on the evidence 
+as it presently stands, the odds of reporting a neuroautoimmune AEFI 
+vis-a-vis any other AEFI are significantly lower than for comparable 
+vaccines, attesting to the safety of COVID-19 vaccines.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Materials and Methods}
 
 Data was obtained for 2015 to 2021, inclusive, from the VAERS website (\url{https://vaers.hhs.gov}) on 12 June 2021.
-The data comprises all reports that were received between 01 January 2015 and 28 May 2021, comprising altogether
-2,528,763 individual reports. Of these, 1,323,178 (52.33\%) pertained to a COVID-19 vaccine.
+The data comprises all reports that were received between 01 January 2015 and 28 May 2021, comprising altogether 2,528,763 individual reports. Of these, 1,323,178 (52.33\%) pertained to a COVID-19 vaccine.
 
 \subsection{Categorisation of cases}
 
@@ -239,7 +247,7 @@ disorder status.\label{contingency_table}}
 %%% \tablesize{} %% You can specify the fontsize here, e.g., \tablesize{\footnotesize}. If commented out \small will be used.
 \begin{tabular}{ccc}
 \toprule
-\textbf{Neuroautoimmune AEFI}	& \textbf{Non-neuroautoimmune AEFI}\\
+& \textbf{Neuroautoimmune AEFI}	& \textbf{Non-neuroautoimmune AEFI}\\
 \midrule
 COVID-19 vaccine	    	& 612			    & 1908  \\
 Non-COVID-19 vaccine		& 1,322,566			& 1,203,677\\
@@ -252,7 +260,7 @@ expected values under the null hypothesis of independence ($H_0$) were ascertain
 
 Finally, a large contingency table was constructed, calculating the reporting odds ratio of each AEFI for each vaccine
 category (VAERS variable \texttt{VAX\_TYPE}), which acts as a superset comprising vaccines that have typically the same
-target and same valency (e.g. the Johnson\&Johnson COVID-19 vaccine and the Moderna vaccine are both in the
+target and same valency (e.g. the Johnson \& Johnson COVID-19 vaccine and the Moderna vaccine are both in the
 \texttt{COVID19} vaccine category, whereas a trivalent and a quadrivalent influenza vaccine would be different vaccine
 categories due to their difference in valency). For the purposes of constructing this table, a regular expression was
 used to filter out a number of entities that are typically recorded in VAERS but which do not indicate an appropriate
@@ -288,7 +296,7 @@ disorder status.\label{pearson_residuals}}
 %%% \tablesize{} %% You can specify the fontsize here, e.g., \tablesize{\footnotesize}. If commented out \small will be used.
 \begin{tabular}{ccc}
 \toprule
-\textbf{Neuroautoimmune AEFI}	& \textbf{Non-neuroautoimmune AEFI}\\
+& \textbf{Neuroautoimmune AEFI}	& \textbf{Non-neuroautoimmune AEFI}\\
 \midrule
 COVID-19 vaccine	    	& -19.459			    & 20.386  \\
 Non-COVID-19 vaccine		& 0.615			        & -0.644\\
@@ -296,12 +304,7 @@ Non-COVID-19 vaccine		& 0.615			        & -0.644\\
 \end{tabular}
 \end{specialtable}
 
-This is confirmed by the Pearson $\chi^2$ residuals that were calculated (see Table~\ref{pearson_residuals}). The
-residual of neuroautoimmune AEFIs following a COVID-19 vaccine ($-19.459$) indicates that the actual value is
-significantly higher than the value expected value under the assumption of the null hypothesis of independence. It is
-therefore quite evident that the odds of reporting a neuroautoimmune AEFI over any other AEFI are correlated with
-whether the preceding vaccine was a COVID-19 vaccine or not, with recipients of COVID-19 vaccines being significantly
-(70\%) less likely to report a neuroautoimmune AEFI.
+This is confirmed by the Pearson $\chi^2$ residuals that were calculated (see Table~\ref{pearson_residuals}). The residual of neuroautoimmune AEFIs following a COVID-19 vaccine ($-19.459$) indicates that the expected value is significantly higher than the actual value under the assumption of the null hypothesis of independence. It is therefore quite evident that the odds of reporting a neuroautoimmune AEFI over any other AEFI are correlated with whether the preceding vaccine was a COVID-19 vaccine or not, with recipients of COVID-19 vaccines being significantly (70\%) less likely to report a neuroautoimmune AEFI.
 
 \subsection{Association of individual neuroautoimmune AEFIs}
 
@@ -367,9 +370,8 @@ Similarly, multiple sclerosis exhibits a similar bimodality of age distribution,
 for early-onset (teens to early 30s) and late onset (50s and later) MS have become established in the
 literature.\cite{kis2008clinical} Nevertheless, clinicians may, as a matter of abundance of caution, keep a closer eye
 on patients with known MS or risk factors for MS (such as previous diagnosis of optic neuritis or CIS/RIS) for signs
-of progression or relapse. This may be accompanied byy proactively explaining the relative risk of a relapse in the
-context of potentially worse clinical outcomes with COVID-19, especially for patients treated with systemic
-immunosupressants.
+of progression or relapse. This may be accompanied by proactively explaining the relative risk of a relapse in the
+context of potentially worse clinical outcomes with COVID-19, especially for patients treated with systemic immunosupressants.
 
 Since the start of the global vaccination campaign, evidence has been accumulating for the overall tolerability and
 safety of the COVID-19 vaccines. This study seeks to add to our current understanding by quantifying the highly
@@ -386,7 +388,7 @@ adverse events still keep most countries from attaining the threshold of collect
 
 \dataavailability{VAERS reporting data is available from the CDC's website at \url{https://vaers.hhs.gov}. All code and
 scripts supporting this manuscript are deposited at
-\url{https://github.com/chrisvoncsefalvay/covid19-neuroautoimmune-aefis} and are made available with the DOI <to follow>.}
+\url{https://github.com/chrisvoncsefalvay/covid19-neuroautoimmune-aefis} and are made available under the DOI 10.5281/zenodo.4940261.}
 
 
 \conflictsofinterest{CvC is a consultant to a company that may be affected by the research reported in this paper. The funders had no role in the design of the study; in the collection, analyses, or interpretation of data; in the writing of the manuscript, or in the decision to publish the~results.}
@@ -399,17 +401,18 @@ The following abbreviations are used in this manuscript:\\
 
 \noindent 
 \begin{tabular}{@{}ll}
-AEFI & Adverse event following immmunization \\
-CDC & Centers for Disease Control and Prevention \\
-CIS & clinically isolated syndrome\\
-EUA & Emergency Use Authorization\\
-FDA & Food and Drug Administration\\
-GBS & Guillain-Barre syndrome\\
-mRNA & messenger RNA\\
-MS & multiple sclerosis \\
-RIS & radiologically isolated syndrome\\
-ROR & Reporting Odds Ratio\\
-VAERS & Vaccine Adverse Effect Reporting System\\
+AEFI 	& 	Adverse event following immmunization 			\\
+CDC 	& 	Centers for Disease Control and Prevention 		\\
+CIS 	& 	clinically isolated syndrome					\\
+EUA 	& 	Emergency Use Authorization						\\
+FDA 	& 	Food and Drug Administration					\\
+GBS 	& 	Guillain-Barre syndrome							\\
+mRNA 	& 	messenger RNA									\\
+MS 		& 	multiple sclerosis 								\\
+QoL 	& 	quality of life 								\\
+RIS 	& 	radiologically isolated syndrome				\\
+ROR 	& 	Reporting Odds Ratio							\\
+VAERS 	& 	Vaccine Adverse Effect Reporting System			\\
 \end{tabular}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
