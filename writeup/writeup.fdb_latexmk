@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex writeup"] 1623615203 "writeup.aux" "writeup.bbl" "writeup" 1623675438
+["bibtex writeup"] 1623615203 "writeup.aux" "writeup.bbl" "writeup" 1623754774
   "./Definitions/mdpi.bst" 1606962306 23371 a650b7df4676b7f3637f3b55c8c8f579 ""
   "bibliography.bib" 1623615192 20797 ce899ba12f2755c95fa7db517d1506ed ""
-  "writeup.aux" 1623675438 6911 958a5a610e0c4e2aa456b8e06da2c7dc ""
+  "writeup.aux" 1623754773 6911 958a5a610e0c4e2aa456b8e06da2c7dc ""
   (generated)
-  "writeup.blg"
   "writeup.bbl"
-["pdflatex"] 1623675436 "writeup.tex" "writeup.pdf" "writeup" 1623675438
+  "writeup.blg"
+["pdflatex"] 1623754772 "writeup.tex" "writeup.pdf" "writeup" 1623754774
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1480098666 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
@@ -244,15 +244,15 @@
   "Definitions/logo-mdpi.eps" 1532255632 736786 8818d4fdfce9a8e859e47bd730481fab ""
   "Definitions/logo-orcid.eps" 1532255632 284378 45e3e5787524f1178a6d00d0629833ef ""
   "Definitions/mdpi.cls" 1622829216 45940 bf52ae3443e8eca8d834ace57b7966dc ""
-  "age_distribution.pdf" 1623614501 40765 6f041a8dda7966dffd5c86310d966b43 ""
+  "age_distribution.pdf" 1623754452 39891 699cab1c0ae0c5111a7aadab8870d953 ""
   "expected_vs_actual_by_symptoms.pdf" 1623614876 21691 38e840c0d2b64287600cc6f8a18d3461 ""
   "ror_by_vaccine_type.pdf" 1623614833 23640 2133011e6627ff05b3d894651d00ad07 ""
-  "writeup.aux" 1623675438 6911 958a5a610e0c4e2aa456b8e06da2c7dc ""
+  "writeup.aux" 1623754773 6911 958a5a610e0c4e2aa456b8e06da2c7dc ""
   "writeup.bbl" 1623615203 6445 8a148fc1b38e281165508fc16efa5310 "bibtex writeup"
-  "writeup.out" 1623675438 1509 8fbe3ce462900bc124287976725bfbe2 ""
-  "writeup.tex" 1623675433 30003 f815ae2b3fc54f8cb875d9ae93dc5dd8 ""
+  "writeup.out" 1623754773 1509 8fbe3ce462900bc124287976725bfbe2 ""
+  "writeup.tex" 1623754769 30022 7449636172d52974c50628c995df9cb3 ""
   (generated)
-  "writeup.aux"
-  "writeup.out"
-  "writeup.log"
   "writeup.pdf"
+  "writeup.log"
+  "writeup.out"
+  "writeup.aux"
